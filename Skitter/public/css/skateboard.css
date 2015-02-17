@@ -21,7 +21,8 @@
   border: 2px solid black;
   margin-top: 40px;
   margin-bottom: 40px;
-
+  background-color: #E6E6FA;
+  text-align: center;
 }
 
 .title{
@@ -43,6 +44,7 @@ nav a{
 
 .list_skatelogs{
   padding: 20px;
+  clear: both;
 }
 
 .new_post{
@@ -55,4 +57,8 @@ nav a{
   width: 35%;
   margin: 10px;
   text-align: center;
+}
+
+h2{
+  top: 50px;
 }

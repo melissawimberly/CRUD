@@ -4,8 +4,15 @@
       <h2>Welcome to SkateLyfe <%=user.name %>!</h2>
       <h4>Checkout all these skaters' skatelogs!</h4>
 
-      <a class="logout_btn" href="/logout">LOGOUT</a>
-      <a href="/users/new"> + </a>
+      <div class="btn_container">
+        <a class="logout_btn" href="/logout">LOGOUT</a>
+      </div>
+
+      <div class="btn_container">
+        <a href="/users/new"> ADD A SESH </a>
+      </div>
+
+
     <% else %>
       <h2>Welcome to SkateLyfe!</h2>
       <h4>Checkout all these skaters' skatelogs!</h4>

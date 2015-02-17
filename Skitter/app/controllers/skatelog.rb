@@ -14,16 +14,16 @@ end
 #################### Profile Page ############################################
 
 get "/show" do
-  erb :show
+  erb :show_id
 end
 
-post "/show" do
-
+post "/show/:id" do
+# is this for any button on the show page?
 end
-
-put "/users/new" do
+# WHERE THE button TAKES YOU
+put "/users/edit" do
   skatelog = Skatelog.create(params[:skatelog])
-  redirect "/show"
+  redirect "/user/:id"
 
 end
 
