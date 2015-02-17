@@ -3,6 +3,8 @@ this should show only Ryan's tweets
 
 
 <div class="container">
-  user = User.
+  user = User.create(params[:user])
   <%= erb :list_skatelogs, locals: {user: user} %>
 </div>
+
+
