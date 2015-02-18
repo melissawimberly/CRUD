@@ -28,8 +28,9 @@ $(document).ready(function() {
         data: $form.serialize(),
         success: function(response){
           $(".auth_btns").remove();
-          $("#content").append(response);
+          $(".container").prepend(response);
           console.log(response);
+          // not to content bc thats the whole thing. im just dealing with the container
         },
         error: function(response){
           console.log("YOU'VE FAILED");
@@ -39,16 +40,40 @@ $(document).ready(function() {
     });
 
 
-var errorMod = (function(){
-  var errorDiv = '#error';
-  var showError = function(message){
-    $(errorDiv).text(message);
-    $(errorDiv).show();
-  };
-  return {
-    show: showError
-  };
-})();
+      $(".signup_form").on("submit", function(event){
+        event.preventDefault();
+        var $form = $(event.target);
+        $.ajax({
+          url:  $form.attr('action'),
+          type: $form.attr('method'),
+          data: $form.serialize(),
+          success: function(response){
+            $(".auth_btns").remove();
+            $(".container").prepend(response);
+            console.log(response);
+            // not to content bc thats the whole thing. im just dealing with the container
+          },
+          error: function(response){
+            console.log("YOU'VE FAILED");
+            errorMod.show("OOPS! You didn't fill out all of the fields!");
+          }
+        });
+      });
 
-  });
+// ajax (or anything in js) call is on the client side -its making a request to my server 
+// and its expecting a response. the server is my sinatra app, its my ruby
+
+
+      var errorMod = (function(){
+        var errorDiv = '#error';
+        var showError = function(message){
+          $(errorDiv).text(message);
+          $(errorDiv).show();
+        };
+        return {
+          show: showError
+        };
+      })();
+
+});
 
