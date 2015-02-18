@@ -32,7 +32,9 @@ end
 
 ########## display a specific skatelog ####################
 get '/skatelogs/:id' do
-  # 
+  @skatelog = Skatelog.find(params[:id])
+
+  erb :show_single_skatelog 
 end
 
 ########## show the form to edit a skatelog ####################
