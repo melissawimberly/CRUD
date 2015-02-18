@@ -8,8 +8,8 @@
         <%= skatelog.title %>
       </div>
 
-      <div class ="profpic">
-        <img src="#profpicUrl">
+      <div >
+        <img class ="profpic" src="<%= skatelog.user.profpic%>">
       </div>
 
       <div class="username">
@@ -19,6 +19,21 @@
       <div class="description">
         <%= skatelog.description %>
       </div>
+
+      <% if current_user && skatelog.user_id == current_user.id %>
+      
+      <button>
+        <a href="/skatelogs/<%=skatelog.id%>/edit">EDIT</a>
+      </button>  
+
+        <form class="delete_skatelog" action="/skatelogs/<%= skatelog.id%>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <!-- <div class="btn_container"> -->
+              <input type="submit" value="DELETE">
+          <!-- </div> -->
+        </form>
+    </div> 
+      <% end %>
     </div>
   <% end %>
 </div>

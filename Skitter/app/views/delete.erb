@@ -1,13 +1,14 @@
-
+DELETE A USER -->
 
 <div class="actions">
-      <form class="delete_skatelog" action="/users/<%= user.id%>/show" method="POST">
+      <form class="delete_skatelog" action="/skatelogs/<%= skatelog.id%>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
-        <div class="btn_container">
-          <a class='btn' href="/users/<%= user.id %>/skatelogs">delete a session</a>
-        </div>
-        <div class="btn_container">
+        <!-- <div class="btn_container"> -->
             <input type="submit" value="DELETE">
-        </div>
+        <!-- </div> -->
       </form>
     </div>
+
+<!-- /skatelogs/:id
+
+  MISSY: add a skatelog and auth file

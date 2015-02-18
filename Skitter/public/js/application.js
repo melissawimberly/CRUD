@@ -33,10 +33,22 @@ $(document).ready(function() {
         },
         error: function(response){
           console.log("YOU'VE FAILED");
+          errorMod.show('Username or Password is incorrect');
         }
       });
     });
 
+
+var errorMod = (function(){
+  var errorDiv = '#error';
+  var showError = function(message){
+    $(errorDiv).text(message);
+    $(errorDiv).show();
+  };
+  return {
+    show: showError
+  };
+})();
 
   });
 

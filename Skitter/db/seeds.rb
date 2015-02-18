@@ -1,10 +1,10 @@
 
-User.create(name: "Missy", username: "Zenon", boardtype: "longboard", password: "123")
+User.create(name: "Missy", username: "Zenon", boardtype: "longboard", password: "123", profpic: "http://bit.ly/1CFKjRp")
 
-User.create(name: "Ryan Sheckler", username: "Ryan", boardtype: "orangatang wheels", password: "123")
-User.create(name: "Paul Rodriguez", username: "P-Rod", boardtype: "redbull", password: "123")
-User.create(name: "Nyjah Huston", username: "SickKid", boardtype: "element", password: "123")
-User.create(name: "Rob Dyrdek", username: "FantasyFactory", boardtype: "dc", password: "123")
+User.create(name: "Ryan Sheckler", username: "Ryan", boardtype: "orangatang wheels", password: "123", profpic: 'http://bit.ly/17flgt6')
+User.create(name: "Paul Rodriguez", username: "P-Rod", boardtype: "redbull", password: "123", profpic: "http://bit.ly/1A3M2jr")
+User.create(name: "Nyjah Huston", username: "SickKid", boardtype: "element", password: "123", profpic: "http://bit.ly/1vTNPIh" )
+User.create(name: "Rob Dyrdek", username: "FantasyFactory", boardtype: "dc", password: "123", profpic: "http://bit.ly/1Mv9vQ3")
 
 
 Skatelog.create(user_id: 1, title: "SB StateSt. Sesh", seshtime:"20mins", tricks:"crooked grind", description:"sick sesh")

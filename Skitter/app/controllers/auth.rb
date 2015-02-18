@@ -12,9 +12,10 @@ post '/login' do
 
     if request.xhr?
       erb :'_partials/_auth', layout: false
-    else
-      redirect '/signup'
     end
+  else
+    return 401
+    # redirect '/signup'
   end
 end
 
